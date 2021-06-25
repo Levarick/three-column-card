@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+button {
+  border-radius: 25px;
+  border: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  height: 50px;
+  width: 150px;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.box img {
+  width: 60px;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px;
+  height: 500px;
+  line-height: 2.6rem;
+  max-width: 355px;
+}
+
+.sedans {
+  background-color: #e38826;
+}
+.sedans button {
+  color: #e38826;
+}
+
+.suvs {
+  background-color: #006970;
+}
+.suvs button {
+  color: #006970;
+}
+
+.luxury {
+  background-color: #004241;
+}
+.luxury button {
+  color: #004241;
+}
+
+@media (min-width: 800px) {
+  main {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .box {
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,87 @@
+$sedans: hsl(31, 77%, 52%);
+$suvs: hsl(184, 100%, 22%);
+$luxury: hsl(179, 100%, 13%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+button {
+  border-radius: 25px;
+  border: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  height: 50px;
+  width: 150px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.box img {
+  width: 60px;
+}
+.box {
+  display: flex;;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+  height: 500px;
+  line-height: 2.6rem;
+  max-width: 355px;
+}
+
+.sedans {
+  background-color: $sedans;
+  button {
+    color: $sedans
+  }
+}
+.suvs {
+  background-color: $suvs;
+  button {
+    color: $suvs;
+  }
+}
+.luxury {
+  background-color: $luxury;
+  button {
+    color: $luxury;
+  }
+}
+
+@media (min-width: 800px) {
+  main {
+    grid-template-columns: repeat(3,1fr);
+  }
+  .box {
+    max-width: 300px;
+  }
+}
